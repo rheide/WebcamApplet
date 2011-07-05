@@ -1,0 +1,61 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Java Webcam Applet Demo</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<script src="jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+	<script language="javascript" type="text/javascript">
+	
+	function squareCode(text) {
+		if (jQuery.trim(text).length == 0) {
+			$("#message").html("-");
+			return;
+		}	
+		$("#message").html("QR Code detected:<br\><span class=\"qrcode\">"+text+"</span>");
+	}
+	</script>
+
+  </head>
+
+  <body>
+  	<img src="example.png"/ style="float:right;">
+    <h2>Java Webcam Applet Demo</h2>
+    <p>
+    Note: this page requires you to give permission for the applet to run. The applet is a peaceful creature, however, it will:
+    </p>
+    <ul>
+    	<li>Contact a server to download the files required to access your webcam.</li>
+    	<li>Store the files locally in a temporary folder./li>
+    	<li>Access your webcam and display the images on your screen (without sending it to anyone)</li>
+    </ul>
+    <p>
+    Please make sure that you're okay with this before starting the applet.
+    </p>
+    <p>
+    The area below displays the qr code that was read from the Java Applet. Try scanning the code in the top right corner for an example.
+    </p>
+    <div id="message">
+    	&nbsp;
+    </div>
+    
+    <div id="cam">
+		<EMBED 
+			type="application/x-java-applet;version=1.5" 
+			NAME="WebcamApplet"
+			CODE="com.colorfulwolf.webcamapplet.WebcamApplet.class" 
+			CODEBASE="classes" 
+			ARCHIVE="/dev/cam/webcamapplet.jar,/dev/cam/core.jar,/dev/cam/javacv.jar,/dev/cam/javase.jar,/dev/cam/jna.jar"
+			WIDTH=660
+			HEIGHT=500
+			scriptable=false
+			pluginspage="http://www.java.com/en/download/inc/windows_upgrade_xpi.jsp"
+			dll_path="http://colorfulwolf.com/dev/cam/">
+		</EMBED>
+    </div>
+     <br/>
+  </body>
+</html>

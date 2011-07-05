@@ -1,0 +1,16 @@
+WebcamApplet: a Java applet that interacts with a webcam. 
+
+This project demonstrates how it's possible to access the webcam from a Java applet. Internally it uses JavaCV and OpenCV to open the webcam. Because OpenCV is a native library the applet will have to load the correct library for each platform. This demo is Windows-only but can easily be extended to include other OSes as well (as long as there's an OpenCV library for it). 
+
+The demo applet shows how to recognize QR codes using Google's zxing library. After a QR code is detected it is passed to the browser via Javascript. The demo page only transmits text to the browser, but it's certainly not impossible to output raw image data to a server via AJAX calls (or directly via Java, of course).
+
+Dependencies:
+- OpenCV: http://opencv.willowgarage.com/wiki/
+- JavaCV: http://code.google.com/p/javacv/
+- zxing: http://code.google.com/p/zxing/
+
+
+
+Author:
+2011 - Randy van der Heide
+http://colorfulwolf.com/blog/
